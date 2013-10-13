@@ -12,14 +12,6 @@ for taking advantage of modern Objective-C language such as [ARC][3], [object li
 [3]: http://clang.llvm.org/docs/AutomaticReferenceCounting.html
 [4]: http://clang.llvm.org/docs/ObjectiveCLiterals.html
 
-## License 
-
-OCPrayerTimes is available under the MIT license (see LICENSE file).
-
-PrayTimes is free software;  it is released under a GNU LGPL v3.0 license
-that allows you to do as you wish with it as long as you don't attempt
-to claim it as your own work. 
-
 ## Requirements
 
 OCPrayerTimes 0.1.0 and higher requires Xcode 5, targeting either iOS 6.0 and above, 
@@ -96,6 +88,14 @@ NSLog(@"%@", prayerTimes);
                                          forDate:[NSDate date]];
 }
 ```
+
+## License 
+
+OCPrayerTimes is available under the MIT license (see LICENSE file).
+
+PrayTimes is free software;  it is released under a GNU LGPL v3.0 license
+that allows you to do as you wish with it as long as you don't attempt
+to claim it as your own work. 
 
 ## Reference
 

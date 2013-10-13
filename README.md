@@ -31,13 +31,11 @@ The following Cocoa frameworks must be linked into the application target for pr
 
 ## Examples
 
+Depending on how you configure your project you may need to `#import` either `<OCPrayerTimes/PrayTime.h>` or `"PrayTime.h"`.
+
 ### Getting prayer times for a given longitude and latitude
 
 ```objective-c
-#import "PrayTime.h"
-
-...
-
 PrayTime *prayerTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
                                            andCalculation:CalculationMethodMWL];
 NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]
@@ -46,17 +44,11 @@ NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]
                                               andTimezone:[prayerTime getTimeZone]];
 NSLog(@"%@", prayerTimes);
 
-...
-
 ```
 
 ### Getting prayer times from current user location
 
 ```objective-c
-#import "PrayTime.h"
-
-...
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -80,9 +72,6 @@ NSLog(@"%@", prayerTimes);
     praytime = [prayTime prayerTimesFromLocation:location
                                          forDate:[NSDate date]];
 }
-
-...
-
 ```
 
 ## Reference

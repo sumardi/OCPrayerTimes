@@ -29,6 +29,29 @@ The following Cocoa frameworks must be linked into the application target for pr
 
 * **CoreLocation.framework**
 
+## Installation
+
+### CocoaPods (Recommended)
+
+[CocoaPods][5] is the recommended way to add OCPrayerTimes to your Xcode project.  
+
+Here's an example `Podfile` that installs OCPrayerTimes. 
+
+[5]: http://www.cocoapods.org
+
+#### Podfile
+
+```ruby
+platform :osx, '10.8'
+pod 'OCPrayerTimes', '~> 0.1.0'
+```
+
+Then run `pod install`.
+
+### Manual
+
+Just add `PrayTime.h` and `PrayTime.m` to your Xcode project.
+
 ## Examples
 
 Depending on how you configure your project you may need to `#import` either `<OCPrayerTimes/PrayTime.h>` or `"PrayTime.h"`.
@@ -85,7 +108,4 @@ Bugs and feature request are tracked on [Github](https://github.com/sumardi/OCPr
 
 ## Credit
 
-The code on which this package is [based][5], is principally developed and maintained by [Sumardi Shukor][6].
-
-[5]: http://praytimes.org/about
-[6]: https://www.twitter.com/sumardi
+The code on which this package is [based][1], is principally developed and maintained by [Sumardi Shukor][2].

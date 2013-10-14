@@ -89,6 +89,11 @@ NSLog(@"%@", prayerTimes);
 }
 ```
 
+## Documentation
+
+- [OCPrayerTimes Reference](http://sumardi.github.io/OCPrayerTimes)
+- [PrayTime Class Reference](http://sumardi.github.io/OCPrayerTimes/Classes/PrayTime.html)
+
 ## License 
 
 OCPrayerTimes is available under the MIT license (see LICENSE file).

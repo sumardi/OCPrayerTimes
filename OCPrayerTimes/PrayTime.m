@@ -41,13 +41,51 @@
     double jDate;      // Julian date
 }
 
+- (double)radiansToDegrees:(double)alpha;
+- (double)degreesToRadians:(double)alpha;
+- (double)fixangle:(double)a;
+- (double)fixhour:(double)a;
+- (double)dsin:(double)d;
+- (double)dcos:(double)d;
+- (double)dtan:(double)d;
+- (double)darcsin:(double)x;
+- (double)darccos:(double)x;
+- (double)darctan:(double)x;
+- (double)darccot:(double)x;
+- (double)darctan2:(double)y andX:(double)x;
+
+- (double)getBaseTimeZone;
+- (double)detectDaylightSaving;
+
+- (double)julianDateForYear:(NSInteger)year month:(NSInteger)month andDay:(NSInteger)day;
+- (double)calculateJulianDateForYear:(NSInteger)year month:(NSInteger)month andDay:(NSInteger)day;
+
+- (NSMutableArray *)sunPosition:(double)jd;
+- (double)equationOfTime:(double)jd;
+- (double)sunDeclination:(double)jd;
+- (double)computeMidDay:(double)t;
+- (double)computeTime:(double)t andAngle:(double)g;
+- (double)computeAsr:(double)step andTime:(double)t;
+
+- (double)timeDiff:(double)time1 andTime2:(double)time2;
+
+- (NSMutableArray *)computeTimes:(NSMutableArray *)times;
+- (NSMutableArray *)computeDayTimes;
+- (NSMutableArray *)adjustTimes:(NSMutableArray *)times;
+- (NSMutableArray *)adjustTimesFormat:(NSMutableArray *)times;
+- (NSMutableArray *)adjustHighLatTimes:(NSMutableArray *)times;
+- (double)nightPortion:(double)angle;
+- (NSMutableArray *)dayPortion:(NSMutableArray*)times;
+- (void)tune:(NSMutableDictionary*)offsetTimes;
+- (NSMutableArray *)tuneTimes:(NSMutableArray *)times;
+
+- (NSString *)floatToTime24:(double)time;
+- (NSString *)floatToTime12:(double)time suffix:(BOOL)f;
+- (NSString *)floatToTime12NS:(double)time;
+
 @end
 
 @implementation PrayTime
-
-@synthesize numIterations;
-@synthesize prayerTimesCurrent;
-@synthesize offsets;
 
 #pragma mark - Creating, Copying and Deallocating Object 
 

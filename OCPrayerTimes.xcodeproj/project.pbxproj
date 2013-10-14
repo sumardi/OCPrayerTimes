@@ -44,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F1677AA180BDE6800EE9DDB /* AppleDoc.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppleDoc.md; sourceTree = "<group>"; };
 		9F39E6A51809D02C008FDAAA /* OCPrayerTimes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OCPrayerTimes; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F39E6A81809D02C008FDAAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9F39E6AB1809D02C008FDAAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		9F39E69C1809D02C008FDAAA = {
 			isa = PBXGroup;
 			children = (
+				9F1677AA180BDE6800EE9DDB /* AppleDoc.md */,
 				9F39E6AA1809D02C008FDAAA /* OCPrayerTimes */,
 				9F39E703180A9DD0008FDAAA /* Tests */,
 				9F39E6A71809D02C008FDAAA /* Frameworks */,
@@ -418,6 +420,7 @@
 				9F39E6B51809D02C008FDAAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F39E70E180A9DD0008FDAAA /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +429,7 @@
 				9F39E710180A9DD0008FDAAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

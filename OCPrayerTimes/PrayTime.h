@@ -19,6 +19,20 @@
 
 #import <Foundation/Foundation.h>
 
+/** The class for calculating Muslim Prayer Times.
+ 
+ Depending on how you configure your project you may need to import "PrayTime.h".
+ 
+ Here is an example for getting prayer times for a given longitude and latitude:
+ 
+    PrayTime *prayerTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
+                                               andCalculation:CalculationMethodMWL];
+    NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]
+                                                     latitude:3.1667
+                                                    longitude:101.7000
+                                                  andTimezone:[prayerTime getTimeZone]];
+ */
+
 // Calculation Methods
 typedef enum {
     CalculationMethodJafari = 0,    // Ithna Ashari
@@ -66,9 +80,8 @@ typedef enum {
 	//------------------- Calc Method Parameters --------------------
 
 	NSMutableDictionary *methodParams;
-	
-	/*  this.methodParams[methodNum] = new Array(fa, ms, mv, is, iv);	
-	 
+
+	/*
 	 fa : fajr angle
 	 ms : maghrib selector (0 = angle; 1 = minutes after sunset)
 	 mv : maghrib parameter value (in angle or minutes)
@@ -79,86 +92,139 @@ typedef enum {
 	NSMutableArray *offsets;
 }
 
-@property (assign) NSInteger numIterations;
-@property (nonatomic, strong) NSMutableArray *prayerTimesCurrent;
-@property (nonatomic, strong) NSMutableArray *offsets;
-
 #pragma mark - Custom Initializers
 
+/** Initializes prayer times instance with the provided values.
+ * @since Available in 0.1.0 and later.
+ * @param juristic Juristic method for prayer times.
+ * @param calculation Prayer calculation method.
+ * @returns Returns the instance of `PrayTime`.
+ */
 - (id)initWithJuristic:(JuristicMethod)juristic andCalculation:(CalculationMethod)calculation;
-
-#pragma mark - Trigonometric Methods
-
-- (double)radiansToDegrees:(double)alpha;
-- (double)degreesToRadians:(double)alpha;
-- (double)fixangle:(double)a;
-- (double)fixhour:(double)a;
-- (double)dsin:(double)d;
-- (double)dcos:(double)d;
-- (double)dtan:(double)d;
-- (double)darcsin:(double)x;
-- (double)darccos:(double)x;
-- (double)darctan:(double)x;
-- (double)darccot:(double)x;
-- (double)darctan2:(double)y andX:(double)x;
 
 #pragma mark - Timezone Methods
 
+/** Returns hours difference in GMT.
+ * @since Available in 0.1.0 and later.
+ */
 - (double)getTimeZone;
-- (double)getBaseTimeZone;
-- (double)detectDaylightSaving;
-
-#pragma mark - Julian Date Methods
-
-- (double)julianDateForYear:(NSInteger)year month:(NSInteger)month andDay:(NSInteger)day;
-- (double)calculateJulianDateForYear:(NSInteger)year month:(NSInteger)month andDay:(NSInteger)day;
-
-#pragma mark - Calculation Methods
-
-- (NSMutableArray *)sunPosition:(double)jd;
-- (double)equationOfTime:(double)jd;
-- (double)sunDeclination:(double)jd;
-- (double)computeMidDay:(double)t;
-- (double)computeTime:(double)t andAngle:(double)g;
-- (double)computeAsr:(double)step andTime:(double)t;
-
-#pragma mark - Misc. Methods
-
-- (double)timeDiff:(double)time1 andTime2:(double)time2;
 
 #pragma mark - Interface Methods
 
+/** Returns prayer times for the provided values.
+ * @since Available in 0.1.0 and later.
+ * @param year Year.
+ * @param month Month.
+ * @param day Day.
+ * @param latitude The north-south position of a point on the Earth's surface.
+ * @param longitude Angle which ranges from 0° at the Equator to 90° (North or South) at the poles.
+ * @param tZone Hours difference in GMT.
+ */
 - (NSMutableArray *)getDatePrayerTimesForYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day latitude:(double)latitude longitude:(double)longitude andtimeZone:(double)tZone;
+
+/** Returns prayer times for the provided values.
+ * @since Available in 0.1.0 and later.
+ * @param date Components of a date.
+ * @param latitude The north-south position of a point on the Earth's surface.
+ * @param longitude Angle which ranges from 0° at the Equator to 90° (North or South) at the poles.
+ * @param tZone Hours difference in GMT.
+ */
 - (NSMutableArray *)getPrayerTimesForDate:(NSDateComponents *)date withLatitude:(double)latitude longitude:(double)longitude andTimeZone:(double)tZone;
+
+/** Returns prayer times for the provided values.
+ * @since Available in 0.1.0 and later.
+ * @param date Date object.
+ * @param latitude The north-south position of a point on the Earth's surface.
+ * @param longitude Angle which ranges from 0° at the Equator to 90° (North or South) at the poles.
+ * @param tZone Hours difference in GMT.
+ */
 - (NSMutableArray *)prayerTimesDate:(NSDate *)date latitude:(double)latitude longitude:(double)longitude andTimezone:(double)timezone;
+
+/** Returns prayer times for the provided location.
+ * @since Available in 0.1.0 and later.
+ * @param location Location object.
+ */
 - (NSMutableArray *)prayerTimesFromLocation:(CLLocation *)location;
+
+/** Returns prayer times for the provided location and date.
+ * @since Available in 0.1.0 and later.
+ * @param location Location object.
+ * @param date Date object.
+ */
 - (NSMutableArray *)prayerTimesFromLocation:(CLLocation *)location forDate:(NSDate *)date;
+
+/** Returns prayer times for the provided location, date and timezone.
+ * @since Available in 0.1.0 and later.
+ * @param location Location object.
+ * @param date Date object.
+ * @param timezone Timezone object.
+ */
 - (NSMutableArray *)prayerTimesFromLocation:(CLLocation *)location forDate:(NSDate *)date timezone:(NSTimeZone *)timezone;
+
+/** Sets prayer calculation method.
+ * @since Available in 0.1.0 and later.
+ * @param method Prayer calculation method.
+ */
 - (void)setCalculationMethod:(CalculationMethod)method;
+
+/** Sets the juristic method for Asr.
+ * @since Available in 0.1.0 and later.
+ * @param method Prayer calculation method.
+ */
 - (void)setJuristicMethod:(JuristicMethod)method;
+
+/** Sets custom values for calculation parameters.
+ * @since Available in 0.1.0 and later.
+ * @param params Parameters in `NSMutableArray`.
+ */
 - (void)setCustomParams:(NSMutableArray *)params;
+
+/** Sets the angle for calculating Fajr.
+ * @since Available in 0.1.0 and later.
+ * @param angle Angle.
+ */
 - (void)setFajrAngle:(double)angle;
+
+/** Sets the angle for calculating Maghrib.
+ * @since Available in 0.1.0 and later.
+ * @param angle Angle.
+ */
 - (void)setMaghribAngle:(double)angle;
+
+/** Sets the angle for calculating Isha.
+ * @since Available in 0.1.0 and later.
+ * @param angle Angle.
+ */
 - (void)setIshaAngle:(double)angle;
+
+/** Sets the minutes after mid-day for calculating Dhuhr.
+ * @since Available in 0.1.0 and later.
+ * @param minutes Minutes after dhuhr.
+ */
 - (void)setDhuhrMinutes:(double)minutes;
+
+/** Sets the minutes after Sunset for calculating Maghrib.
+ * @since Available in 0.1.0 and later.
+ * @param minutes Minutes after maghrib.
+ */
 - (void)setMaghribMinutes:(double)minutes;
+
+/** Sets the minutes after Maghrib for calculating Isha.
+ * @since Available in 0.1.0 and later.
+ * @param minutes Minutes after isha.
+ */
 - (void)setIshaMinutes:(double)minutes;
+
+/** Sets adjusting method for higher latitudes.
+ * @since Available in 0.1.0 and later.
+ * @param method Adjusting method for higher latitude in `AdjustMethodHigherLatitude`.
+ */
 - (void)setHighLatitudsMethod:(AdjustMethodHigherLatitude)method;
+
+/** Sets time format.
+ * @since Available in 0.1.0 and later.
+ * @param format Time format in `TimeFormat`.
+ */
 - (void)setTimeFormat:(TimeFormat)format;
-- (NSString *)floatToTime24:(double)time;
-- (NSString *)floatToTime12:(double)time suffix:(BOOL)f;
-- (NSString *)floatToTime12NS:(double)time;
-
-#pragma mark - Compute Prayer Times
-
-- (NSMutableArray *)computeTimes:(NSMutableArray *)times;
-- (NSMutableArray *)computeDayTimes;
-- (NSMutableArray *)adjustTimes:(NSMutableArray *)times;
-- (NSMutableArray *)adjustTimesFormat:(NSMutableArray *)times;
-- (NSMutableArray *)adjustHighLatTimes:(NSMutableArray *)times;
-- (double)nightPortion:(double)angle;
-- (NSMutableArray *)dayPortion:(NSMutableArray*)times;
-- (void)tune:(NSMutableDictionary*)offsetTimes;
-- (NSMutableArray *)tuneTimes:(NSMutableArray *)times;
 
 @end

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>OCPrayerTimes Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">OCPrayerTimes </a></h1>
+				<a id="developerHome" href="index.html">Software Machine Development</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">OCPrayerTimes Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">OCPrayerTimes Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>Objective-C Library for Muslim Prayer Times</h1>
+
+<p><a href="https://travis-ci.org/sumardi/OCPrayerTimes"><img src="https://travis-ci.org/sumardi/OCPrayerTimes.png" alt="Build Status" /></a></p>
+
+<p>OCPrayerTimes is an Objective-C library for calculating Muslim Prayer Times.
+Modified version of the original source code written by Hamid Zarrabi-Zadeh and
+Hussain Ali from <a href="[http://www.praytimes.org](http://www.praytimes.org)">PrayTimes.org</a>. The source code was modified by <a href="[https://www.twitter.com/sumardi](https://www.twitter.com/sumardi)">Sumardi Shukor</a>
+for taking advantage of modern Objective-C language such as <a href="[http://clang.llvm.org/docs/AutomaticReferenceCounting.html](http://clang.llvm.org/docs/AutomaticReferenceCounting.html)">ARC</a>, <a href="[http://clang.llvm.org/docs/ObjectiveCLiterals.html](http://clang.llvm.org/docs/ObjectiveCLiterals.html)">object literals</a>, etc.</p>
+
+<h2>Requirements</h2>
+
+<p>OCPrayerTimes 0.1.0 and higher requires Xcode 5, targeting either iOS 6.0 and above,
+or Mac OS 10.8 Mountain Lion (64-bit with modern Cocoa runtime) and above.</p>
+
+<p>The following Cocoa frameworks must be linked into the application target for proper compilation:</p>
+
+<ul>
+<li><strong>CoreLocation.framework</strong></li>
+</ul>
+
+
+<h2>Installation</h2>
+
+<h3>CocoaPods (Recommended)</h3>
+
+<p><a href="[http://www.cocoapods.org](http://www.cocoapods.org)">CocoaPods</a> is the recommended way to add OCPrayerTimes to your Xcode project.</p>
+
+<p>Here&rsquo;s an example <code>Podfile</code> that installs OCPrayerTimes.</p>
+
+<h4>Podfile</h4>
+
+<pre><code>platform :osx, '10.8'
+pod 'OCPrayerTimes', '~&gt; 0.1.0'
+</code></pre>
+
+<p>Then run <code>pod install</code>.</p>
+
+<h3>Manual</h3>
+
+<p>Just add <code>PrayTime.h</code> and <code>PrayTime.m</code> to your Xcode project.</p>
+
+<h2>Examples</h2>
+
+<p>Depending on how you configure your project you may need to <code>#import</code> either <code>&lt;OCPrayerTimes/PrayTime.h&gt;</code> or <code>"PrayTime.h"</code>.</p>
+
+<h3>Getting prayer times for a given longitude and latitude</h3>
+
+<pre><code>PrayTime *prayerTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
+                                           andCalculation:CalculationMethodMWL];
+NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]
+                                                 latitude:3.1667
+                                                longitude:101.7000
+                                            andTimezone:[prayerTime getTimeZone]];
+NSLog(@"%@", prayerTimes);
+</code></pre>
+
+<h3>Getting prayer times from current user location</h3>
+
+<pre><code>- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    self.locationManager.delegate = self;
+
+    [self.locationManager startUpdatingLocation];
+
+    prayTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
+                                   andCalculation:CalculationMethodMWL];
+    [prayTime setTimeFormat:TimeFormat12Hour];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *location = [locations lastObject];
+
+    praytime = [prayTime prayerTimesFromLocation:location
+                                         forDate:[NSDate date]];
+}
+</code></pre>
+
+<h2>License</h2>
+
+<p>OCPrayerTimes is available under the MIT license (see LICENSE file).</p>
+
+<p>PrayTimes is free software;  it is released under a GNU LGPL v3.0 license
+that allows you to do as you wish with it as long as you don&rsquo;t attempt
+to claim it as your own work.</p>
+
+<h2>Reference</h2>
+
+<ul>
+<li><a href="http://www.praytimes.org">http://www.praytimes.org</a></li>
+</ul>
+
+
+<h2>Support</h2>
+
+<p>Bugs and feature request are tracked on <a href="https://github.com/sumardi/OCPrayerTimes/issues">Github</a></p>
+
+<h2>Credit</h2>
+
+<p>The code on which this package is <a href="[http://www.praytimes.org](http://www.praytimes.org)">based</a>, is principally developed and maintained by <a href="[https://www.twitter.com/sumardi](https://www.twitter.com/sumardi)">Sumardi Shukor</a>.</p>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/PrayTime.html">PrayTime</a></li>
+							
+						</ul>
+					</div>
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Software Machine Development. All rights reserved. (Last updated: 2013-10-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

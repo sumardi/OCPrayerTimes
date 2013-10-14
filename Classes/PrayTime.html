@@ -1,0 +1,1518 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PrayTime Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">OCPrayerTimes </a></h1>
+				<a id="developerHome" href="../index.html">Software Machine Development</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PrayTime Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:">&nbsp;&nbsp;&nbsp;&nbsp;- getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:</option>
+	
+	<option value="//api/name/getPrayerTimesForDate:withLatitude:longitude:andTimeZone:">&nbsp;&nbsp;&nbsp;&nbsp;- getPrayerTimesForDate:withLatitude:longitude:andTimeZone:</option>
+	
+	<option value="//api/name/getTimeZone">&nbsp;&nbsp;&nbsp;&nbsp;- getTimeZone</option>
+	
+	<option value="//api/name/initWithJuristic:andCalculation:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithJuristic:andCalculation:</option>
+	
+	<option value="//api/name/prayerTimesDate:latitude:longitude:andTimezone:">&nbsp;&nbsp;&nbsp;&nbsp;- prayerTimesDate:latitude:longitude:andTimezone:</option>
+	
+	<option value="//api/name/prayerTimesFromLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- prayerTimesFromLocation:</option>
+	
+	<option value="//api/name/prayerTimesFromLocation:forDate:">&nbsp;&nbsp;&nbsp;&nbsp;- prayerTimesFromLocation:forDate:</option>
+	
+	<option value="//api/name/prayerTimesFromLocation:forDate:timezone:">&nbsp;&nbsp;&nbsp;&nbsp;- prayerTimesFromLocation:forDate:timezone:</option>
+	
+	<option value="//api/name/setCalculationMethod:">&nbsp;&nbsp;&nbsp;&nbsp;- setCalculationMethod:</option>
+	
+	<option value="//api/name/setCustomParams:">&nbsp;&nbsp;&nbsp;&nbsp;- setCustomParams:</option>
+	
+	<option value="//api/name/setDhuhrMinutes:">&nbsp;&nbsp;&nbsp;&nbsp;- setDhuhrMinutes:</option>
+	
+	<option value="//api/name/setFajrAngle:">&nbsp;&nbsp;&nbsp;&nbsp;- setFajrAngle:</option>
+	
+	<option value="//api/name/setHighLatitudsMethod:">&nbsp;&nbsp;&nbsp;&nbsp;- setHighLatitudsMethod:</option>
+	
+	<option value="//api/name/setIshaAngle:">&nbsp;&nbsp;&nbsp;&nbsp;- setIshaAngle:</option>
+	
+	<option value="//api/name/setIshaMinutes:">&nbsp;&nbsp;&nbsp;&nbsp;- setIshaMinutes:</option>
+	
+	<option value="//api/name/setJuristicMethod:">&nbsp;&nbsp;&nbsp;&nbsp;- setJuristicMethod:</option>
+	
+	<option value="//api/name/setMaghribAngle:">&nbsp;&nbsp;&nbsp;&nbsp;- setMaghribAngle:</option>
+	
+	<option value="//api/name/setMaghribMinutes:">&nbsp;&nbsp;&nbsp;&nbsp;- setMaghribMinutes:</option>
+	
+	<option value="//api/name/setTimeFormat:">&nbsp;&nbsp;&nbsp;&nbsp;- setTimeFormat:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:">getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getPrayerTimesForDate:withLatitude:longitude:andTimeZone:">getPrayerTimesForDate:withLatitude:longitude:andTimeZone:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getTimeZone">getTimeZone</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithJuristic:andCalculation:">initWithJuristic:andCalculation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/prayerTimesDate:latitude:longitude:andTimezone:">prayerTimesDate:latitude:longitude:andTimezone:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/prayerTimesFromLocation:">prayerTimesFromLocation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/prayerTimesFromLocation:forDate:">prayerTimesFromLocation:forDate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/prayerTimesFromLocation:forDate:timezone:">prayerTimesFromLocation:forDate:timezone:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCalculationMethod:">setCalculationMethod:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCustomParams:">setCustomParams:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDhuhrMinutes:">setDhuhrMinutes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setFajrAngle:">setFajrAngle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setHighLatitudsMethod:">setHighLatitudsMethod:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setIshaAngle:">setIshaAngle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setIshaMinutes:">setIshaMinutes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJuristicMethod:">setJuristicMethod:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setMaghribAngle:">setMaghribAngle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setMaghribMinutes:">setMaghribMinutes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setTimeFormat:">setTimeFormat:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PrayTime Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PrayTime Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PrayTime.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The class for calculating Muslim Prayer Times.</p>
+
+<p>Depending on how you configure your project you may need to import &ldquo;PrayTime.h&rdquo;.</p>
+
+<p>Here is an example for getting prayer times for a given longitude and latitude:</p>
+
+<pre><code>PrayTime *prayerTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
+                                           andCalculation:CalculationMethodMWL];
+NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]
+                                                 latitude:3.1667
+                                                longitude:101.7000
+                                              andTimezone:[prayerTime getTimeZone]];
+</code></pre>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithJuristic:andCalculation:">&ndash;&nbsp;initWithJuristic:andCalculation:</a></code>
+		<span class="tooltip"><p>Initializes prayer times instance with the provided values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getTimeZone">&ndash;&nbsp;getTimeZone</a></code>
+		<span class="tooltip"><p>Returns hours difference in GMT.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:">&ndash;&nbsp;getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:</a></code>
+		<span class="tooltip"><p>Returns prayer times for the provided values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getPrayerTimesForDate:withLatitude:longitude:andTimeZone:">&ndash;&nbsp;getPrayerTimesForDate:withLatitude:longitude:andTimeZone:</a></code>
+		<span class="tooltip"><p>Returns prayer times for the provided values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/prayerTimesDate:latitude:longitude:andTimezone:">&ndash;&nbsp;prayerTimesDate:latitude:longitude:andTimezone:</a></code>
+		<span class="tooltip"><p>Returns prayer times for the provided values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/prayerTimesFromLocation:">&ndash;&nbsp;prayerTimesFromLocation:</a></code>
+		<span class="tooltip"><p>Returns prayer times for the provided location.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/prayerTimesFromLocation:forDate:">&ndash;&nbsp;prayerTimesFromLocation:forDate:</a></code>
+		<span class="tooltip"><p>Returns prayer times for the provided location and date.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/prayerTimesFromLocation:forDate:timezone:">&ndash;&nbsp;prayerTimesFromLocation:forDate:timezone:</a></code>
+		<span class="tooltip"><p>Returns prayer times for the provided location, date and timezone.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setCalculationMethod:">&ndash;&nbsp;setCalculationMethod:</a></code>
+		<span class="tooltip"><p>Sets prayer calculation method.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJuristicMethod:">&ndash;&nbsp;setJuristicMethod:</a></code>
+		<span class="tooltip"><p>Sets the juristic method for Asr.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setCustomParams:">&ndash;&nbsp;setCustomParams:</a></code>
+		<span class="tooltip"><p>Sets custom values for calculation parameters.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setFajrAngle:">&ndash;&nbsp;setFajrAngle:</a></code>
+		<span class="tooltip"><p>Sets the angle for calculating Fajr.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMaghribAngle:">&ndash;&nbsp;setMaghribAngle:</a></code>
+		<span class="tooltip"><p>Sets the angle for calculating Maghrib.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setIshaAngle:">&ndash;&nbsp;setIshaAngle:</a></code>
+		<span class="tooltip"><p>Sets the angle for calculating Isha.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDhuhrMinutes:">&ndash;&nbsp;setDhuhrMinutes:</a></code>
+		<span class="tooltip"><p>Sets the minutes after mid-day for calculating Dhuhr.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMaghribMinutes:">&ndash;&nbsp;setMaghribMinutes:</a></code>
+		<span class="tooltip"><p>Sets the minutes after Sunset for calculating Maghrib.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setIshaMinutes:">&ndash;&nbsp;setIshaMinutes:</a></code>
+		<span class="tooltip"><p>Sets the minutes after Maghrib for calculating Isha.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setHighLatitudsMethod:">&ndash;&nbsp;setHighLatitudsMethod:</a></code>
+		<span class="tooltip"><p>Sets adjusting method for higher latitudes.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setTimeFormat:">&ndash;&nbsp;setTimeFormat:</a></code>
+		<span class="tooltip"><p>Sets time format.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:" title="getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:"></a>
+	<h3 class="subsubtitle method-title">getDatePrayerTimesForYear:month:day:latitude:longitude:andtimeZone:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns prayer times for the provided values.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSMutableArray *)getDatePrayerTimesForYear:(NSInteger)<em>year</em> month:(NSInteger)<em>month</em> day:(NSInteger)<em>day</em> latitude:(double)<em>latitude</em> longitude:(double)<em>longitude</em> andtimeZone:(double)<em>tZone</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>year</em></dt>
+			<dd><p>Year.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>month</em></dt>
+			<dd><p>Month.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>day</em></dt>
+			<dd><p>Day.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>latitude</em></dt>
+			<dd><p>The north-south position of a point on the Earth&rsquo;s surface.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>longitude</em></dt>
+			<dd><p>Angle which ranges from 0° at the Equator to 90° (North or South) at the poles.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tZone</em></dt>
+			<dd><p>Hours difference in GMT.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getPrayerTimesForDate:withLatitude:longitude:andTimeZone:" title="getPrayerTimesForDate:withLatitude:longitude:andTimeZone:"></a>
+	<h3 class="subsubtitle method-title">getPrayerTimesForDate:withLatitude:longitude:andTimeZone:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns prayer times for the provided values.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSMutableArray *)getPrayerTimesForDate:(NSDateComponents *)<em>date</em> withLatitude:(double)<em>latitude</em> longitude:(double)<em>longitude</em> andTimeZone:(double)<em>tZone</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>Components of a date.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>latitude</em></dt>
+			<dd><p>The north-south position of a point on the Earth&rsquo;s surface.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>longitude</em></dt>
+			<dd><p>Angle which ranges from 0° at the Equator to 90° (North or South) at the poles.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tZone</em></dt>
+			<dd><p>Hours difference in GMT.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getTimeZone" title="getTimeZone"></a>
+	<h3 class="subsubtitle method-title">getTimeZone</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns hours difference in GMT.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (double)getTimeZone</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithJuristic:andCalculation:" title="initWithJuristic:andCalculation:"></a>
+	<h3 class="subsubtitle method-title">initWithJuristic:andCalculation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes prayer times instance with the provided values.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithJuristic:(JuristicMethod)<em>juristic</em> andCalculation:(CalculationMethod)<em>calculation</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>juristic</em></dt>
+			<dd><p>Juristic method for prayer times.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>calculation</em></dt>
+			<dd><p>Prayer calculation method.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the instance of <code>PrayTime</code>.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/prayerTimesDate:latitude:longitude:andTimezone:" title="prayerTimesDate:latitude:longitude:andTimezone:"></a>
+	<h3 class="subsubtitle method-title">prayerTimesDate:latitude:longitude:andTimezone:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns prayer times for the provided values.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSMutableArray *)prayerTimesDate:(NSDate *)<em>date</em> latitude:(double)<em>latitude</em> longitude:(double)<em>longitude</em> andTimezone:(double)<em>timezone</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>Date object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>latitude</em></dt>
+			<dd><p>The north-south position of a point on the Earth&rsquo;s surface.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>longitude</em></dt>
+			<dd><p>Angle which ranges from 0° at the Equator to 90° (North or South) at the poles.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tZone</em></dt>
+			<dd><p>Hours difference in GMT.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/prayerTimesFromLocation:" title="prayerTimesFromLocation:"></a>
+	<h3 class="subsubtitle method-title">prayerTimesFromLocation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns prayer times for the provided location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSMutableArray *)prayerTimesFromLocation:(CLLocation *)<em>location</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>Location object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/prayerTimesFromLocation:forDate:" title="prayerTimesFromLocation:forDate:"></a>
+	<h3 class="subsubtitle method-title">prayerTimesFromLocation:forDate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns prayer times for the provided location and date.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSMutableArray *)prayerTimesFromLocation:(CLLocation *)<em>location</em> forDate:(NSDate *)<em>date</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>Location object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>Date object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/prayerTimesFromLocation:forDate:timezone:" title="prayerTimesFromLocation:forDate:timezone:"></a>
+	<h3 class="subsubtitle method-title">prayerTimesFromLocation:forDate:timezone:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns prayer times for the provided location, date and timezone.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSMutableArray *)prayerTimesFromLocation:(CLLocation *)<em>location</em> forDate:(NSDate *)<em>date</em> timezone:(NSTimeZone *)<em>timezone</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>Location object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>Date object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timezone</em></dt>
+			<dd><p>Timezone object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setCalculationMethod:" title="setCalculationMethod:"></a>
+	<h3 class="subsubtitle method-title">setCalculationMethod:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets prayer calculation method.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setCalculationMethod:(CalculationMethod)<em>method</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>method</em></dt>
+			<dd><p>Prayer calculation method.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setCustomParams:" title="setCustomParams:"></a>
+	<h3 class="subsubtitle method-title">setCustomParams:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets custom values for calculation parameters.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setCustomParams:(NSMutableArray *)<em>params</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>params</em></dt>
+			<dd><p>Parameters in <code>NSMutableArray</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDhuhrMinutes:" title="setDhuhrMinutes:"></a>
+	<h3 class="subsubtitle method-title">setDhuhrMinutes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the minutes after mid-day for calculating Dhuhr.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDhuhrMinutes:(double)<em>minutes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minutes</em></dt>
+			<dd><p>Minutes after dhuhr.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setFajrAngle:" title="setFajrAngle:"></a>
+	<h3 class="subsubtitle method-title">setFajrAngle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the angle for calculating Fajr.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setFajrAngle:(double)<em>angle</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>angle</em></dt>
+			<dd><p>Angle.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setHighLatitudsMethod:" title="setHighLatitudsMethod:"></a>
+	<h3 class="subsubtitle method-title">setHighLatitudsMethod:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets adjusting method for higher latitudes.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setHighLatitudsMethod:(AdjustMethodHigherLatitude)<em>method</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>method</em></dt>
+			<dd><p>Adjusting method for higher latitude in <code>AdjustMethodHigherLatitude</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setIshaAngle:" title="setIshaAngle:"></a>
+	<h3 class="subsubtitle method-title">setIshaAngle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the angle for calculating Isha.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setIshaAngle:(double)<em>angle</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>angle</em></dt>
+			<dd><p>Angle.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setIshaMinutes:" title="setIshaMinutes:"></a>
+	<h3 class="subsubtitle method-title">setIshaMinutes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the minutes after Maghrib for calculating Isha.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setIshaMinutes:(double)<em>minutes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minutes</em></dt>
+			<dd><p>Minutes after isha.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJuristicMethod:" title="setJuristicMethod:"></a>
+	<h3 class="subsubtitle method-title">setJuristicMethod:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the juristic method for Asr.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJuristicMethod:(JuristicMethod)<em>method</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>method</em></dt>
+			<dd><p>Prayer calculation method.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setMaghribAngle:" title="setMaghribAngle:"></a>
+	<h3 class="subsubtitle method-title">setMaghribAngle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the angle for calculating Maghrib.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setMaghribAngle:(double)<em>angle</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>angle</em></dt>
+			<dd><p>Angle.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setMaghribMinutes:" title="setMaghribMinutes:"></a>
+	<h3 class="subsubtitle method-title">setMaghribMinutes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the minutes after Sunset for calculating Maghrib.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setMaghribMinutes:(double)<em>minutes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minutes</em></dt>
+			<dd><p>Minutes after maghrib.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setTimeFormat:" title="setTimeFormat:"></a>
+	<h3 class="subsubtitle method-title">setTimeFormat:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets time format.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setTimeFormat:(TimeFormat)<em>format</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>format</em></dt>
+			<dd><p>Time format in <code>TimeFormat</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Available in 0.1.0 and later.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PrayTime.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Software Machine Development. All rights reserved. (Last updated: 2013-10-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
